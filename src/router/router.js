@@ -6,6 +6,37 @@ const { Header, Content, Sider, Footer } = Layout;
 
 const AppRouter = () => {
   return (
+
+      <HashRouter>
+        <Switch>
+          {/* 规则配置 -- 词规则配置 */}
+          <LayoutRoute
+              component={CodeBlock}
+              layout={SidebarLayout}
+              path="/manager/word_rule_config"
+          />
+
+          {/* 规则配置 -- 中文句式规则配置 -- 详情 */}
+          <LayoutRoute
+              component={ChineseSentenceRuleConfigDetail}
+              layout={SidebarLayout}
+              path="/manager/cn_sentence_rule_config/detail"
+          />
+        </Switch>
+      </HashRouter>
+
+
+
+
+
+
+
+
+
+
+
+
+
     <HashRouter pathname="/home">
       <Layout>
         <Header></Header>
