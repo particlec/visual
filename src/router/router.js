@@ -9,14 +9,14 @@ const AppRouter = () => {
 
       <HashRouter>
         <Switch>
-          {/* 规则配置 -- 词规则配置 */}
+
           <LayoutRoute
               component={CodeBlock}
               layout={SidebarLayout}
               path="/manager/word_rule_config"
           />
 
-          {/* 规则配置 -- 中文句式规则配置 -- 详情 */}
+
           <LayoutRoute
               component={ChineseSentenceRuleConfigDetail}
               layout={SidebarLayout}
