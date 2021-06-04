@@ -1,10 +1,16 @@
 import React from 'react';
 import AceEditor from 'react-ace';
 
-import 'ace-builds/src-noconflict/mode-java';
-import 'ace-builds/src-noconflict/theme-github';
+import 'ace-builds/src-noconflict/mode-javascript';
+import 'ace-builds/src-noconflict/theme-monokai';
+import 'ace-builds/src-noconflict/mode-sh';
+import 'ace-builds/src-noconflict/ext-language_tools';
 
 function CodeBlock() {
+  function onChange(newValue) {
+    console.log('change', newValue);
+  }
+
   return (
     <AceEditor
       height="100%"
@@ -13,8 +19,8 @@ function CodeBlock() {
       theme="monokai"
       name="blah2"
       // onLoad={this.onLoad}
-      // onChange={this.onChange}
-      fontSize={14}
+      onChange={onChange}
+      fontSize={16}
       showPrintMargin={true}
       showGutter={true}
       highlightActiveLine={true}
@@ -22,9 +28,9 @@ function CodeBlock() {
   return xxx;
 }`}
       setOptions={{
-        enableBasicAutocompletion: false,
-        enableLiveAutocompletion: false,
-        enableSnippets: false,
+        enableBasicAutocompletion: true,
+        enableLiveAutocompletion: true,
+        enableSnippets: true,
         showLineNumbers: true,
         tabSize: 2,
       }}
