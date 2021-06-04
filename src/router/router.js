@@ -43,6 +43,19 @@ const AppRouter = () => {
           </Content>
         </Layout>
 
+        <Layout style={{ height: '120%' }}>
+          <Sider>
+            <Sidebar />
+          </Sider>
+
+          <Content>
+            <Route path="/fieldModel/home">
+              <Responsive />
+              {/*<CodeBlock />*/}
+            </Route>
+          </Content>
+        </Layout>
+
         {/*<LayoutRoute component={App} layout={SidebarLayout} path="/app" />*/}
       </Switch>
     </HashRouter>
