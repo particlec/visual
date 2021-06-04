@@ -30,7 +30,7 @@ const AppRouter = () => {
         </Route>
 
         {/*简单组合*/}
-        <Layout style={{ height: '100%' }}>
+        <Layout style={{ height: '120%' }}>
           <Sider>
             <Sidebar />
           </Sider>

@@ -1,5 +1,6 @@
 import { Col, Row } from 'antd';
 import CodeBlock from '../codeBlock/codeBlock';
+import LineChart from '../lineChart/lineChart';
 import fieldModelDataShow from './fieldModelDataShow';
 
 function VisualFirst() {
@@ -10,7 +11,7 @@ function VisualFirst() {
           <div
             style={{
               backgroundColor: 'white',
-              height: '150px',
+              height: '220px',
               wight: '100%',
               margin: '15px',
             }}
@@ -26,12 +27,12 @@ function VisualFirst() {
               margin: '15px',
             }}
           >
-            {' '}
+            <LineChart />
           </div>
           <div
             style={{
               backgroundColor: 'white',
-              height: '160px',
+              height: '250px',
               wight: '100%',
               margin: '15px',
             }}

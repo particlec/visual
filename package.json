@@ -41,6 +41,8 @@
     ]
   },
   "devDependencies": {
+    "bizcharts": "^4.1.10",
+    "bizgoblin": "^0.2.0",
     "styled-components": "^5.3.0"
   }
 }
