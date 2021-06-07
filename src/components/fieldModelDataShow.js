@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import apis from '../apis/apis';
+import imageUrl from '../picture/function.png';
 
 function FieldModelDataShow() {
   const [briefInfo, setBriefInfo] = useState(false);
@@ -12,7 +13,6 @@ function FieldModelDataShow() {
       })
       .then(res => {
         console.log(res);
-
         setBriefInfo(res.data.utData);
       });
   }, []);
@@ -25,7 +25,8 @@ function FieldModelDataShow() {
           className="item"
           style={{ display: 'inline-block', margin: '20px' }}
         >
-          <img src={require('../picture/function.png')} alt="" />
+          {/*<img src={require(`url(${imageUrl})`)} alt="" />*/}
+          <img src={require('../picture/function.png')} alt="1" />
           <div>
             <h3>{briefInfo?.functionCount ? briefInfo?.functionCount : 0}</h3>
             <span>领域函数</span>

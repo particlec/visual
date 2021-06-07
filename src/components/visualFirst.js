@@ -2,6 +2,7 @@ import { Col, Row } from 'antd';
 import styled from 'styled-components';
 import CodeBlock from '../codeBlock/codeBlock';
 import LineChart from '../lineChart/lineChart';
+import CloudRun from './cloudRun';
 import FieldModelDataShow from './fieldModelDataShow';
 import './visualFirst.css';
 
