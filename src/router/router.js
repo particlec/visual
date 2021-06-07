@@ -30,7 +30,7 @@ const AppRouter = () => {
         </Route>
 
         {/*简单组合*/}
-        <Layout style={{ height: '120%' }}>
+        <Layout style={{ height: '100%' }}>
           <Sider>
             <Sidebar />
           </Sider>
@@ -43,19 +43,7 @@ const AppRouter = () => {
           </Content>
         </Layout>
 
-        <Layout style={{ height: '120%' }}>
-          <Sider>
-            <Sidebar />
-          </Sider>
-
-          <Content>
-            <Route path="/fieldModel/home">
-              <Responsive />
-              {/*<CodeBlock />*/}
-            </Route>
-          </Content>
-        </Layout>
-
+        <Redirect to="/fieldModel/home" />
         {/*<LayoutRoute component={App} layout={SidebarLayout} path="/app" />*/}
       </Switch>
     </HashRouter>

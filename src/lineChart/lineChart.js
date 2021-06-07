@@ -1,5 +1,6 @@
 import React from 'react';
 import { Chart, Axis, Geom, Tooltip, Legend } from 'bizgoblin';
+import './lineChart.css';
 
 //react+G2   :https://bizcharts.net/product/bizgoblin/gallery
 function LineChart() {
@@ -95,7 +96,7 @@ function LineChart() {
 
   return (
     <div>
-      <div style={{ fontSize: '900' }}>热门领域</div>
+      <div className="fieldFont">热门领域</div>
       <Chart
         width="50%"
         data={data}

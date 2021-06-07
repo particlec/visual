@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const { SubMenu } = Menu;
 const Sidebar = () => {
   return (
-    <div style={{ height: '100%' }}>
+    <div style={{ height: 'auto' }}>
       <Menu
         // defaultSelectedKeys={defaultSelectedKeys}
         // defaultOpenKeys={true}

@@ -1,6 +1,6 @@
 import React from 'react';
 import AceEditor from 'react-ace';
-
+import styled from 'styled-components';
 import 'ace-builds/src-noconflict/mode-javascript';
 import 'ace-builds/src-noconflict/theme-monokai';
 import 'ace-builds/src-noconflict/mode-sh';

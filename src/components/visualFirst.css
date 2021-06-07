@@ -1,0 +1,35 @@
+.consent{
+    background-color: #bfbfbf;
+    height: 100%;
+    width: 100%;
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.consent-row{
+    height: 100%;
+}
+
+.consent-col{
+    margin: 20px;
+}
+.consent-row-FieldModelDataShow{
+    background-color: white;
+    height: 200px;
+    width: 100%;
+    margin: 15px;
+}
+
+.consent-row-LineChart{
+    background-color: white;
+    height: 420px;
+    width:100%;
+    margin: 15px;
+}
+
+.consent-row-chart{
+    background-color: white;
+    height: 100px;
+    width: 100%;
+    margin: 15px;
+}
