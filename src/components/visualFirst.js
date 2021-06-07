@@ -34,6 +34,7 @@ function VisualFirst() {
           </div>
           <div className="consent-row-chart">
             <div className="consent-col"> </div>
+            <CloudRun />
           </div>
         </Col>
 
