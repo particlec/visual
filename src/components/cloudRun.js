@@ -4,16 +4,16 @@ import axios from 'axios';
 import apis from '../apis/apis';
 function CloudRun() {
   const [res, setRes] = useState(false);
-  // const data02 = [
-  //   { year: '1951 年', sales: 30 },
-  //   { year: '1952 年', sales: 52 },
-  //   { year: '1956 年', sales: 61 },
-  //   { year: '1957 年', sales: 45 },
-  //   { year: '1958 年', sales: 48 },
-  //   { year: '1959 年', sales: 38 },
-  //   { year: '1960 年', sales: 38 },
-  //   { year: '1962 年', sales: 38 },
-  // ];
+  const data02 = [
+    { year: '1951 年', total: 30 },
+    { year: '1952 年', total: 52 },
+    { year: '1956 年', total: 61 },
+    { year: '1957 年', total: 45 },
+    { year: '1958 年', total: 48 },
+    { year: '1959 年', total: 38 },
+    { year: '1960 年', total: 38 },
+    { year: '1962 年', total: 38 },
+  ];
 
   function dealRes(res) {
     for (let i = 0; i < res?.length; i++) {
@@ -47,7 +47,7 @@ function CloudRun() {
         padding={[30, 20, 60, 40]}
         autoFit
         height={150}
-        data={res}
+        data={data02}
         interactions={['element-active']}
       >
         <Point

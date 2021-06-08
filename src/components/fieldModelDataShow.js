@@ -47,7 +47,8 @@ function FieldModelDataShow() {
             width="30px"
           />
           <div>
-            <h3>{briefInfo?.functionCount ? briefInfo?.functionCount : 0}</h3>
+            {/*<h3>{briefInfo?.functionCount ? briefInfo?.functionCount : 0}</h3>*/}
+            <h3>48</h3>
             <span>领域函数</span>
           </div>
         </div>
@@ -67,7 +68,8 @@ function FieldModelDataShow() {
             width="30px"
           />
           <div>
-            <h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>
+            {/*<h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>*/}
+            <h3>588</h3>
             <span>领域语言</span>
           </div>
         </div>
@@ -87,7 +89,8 @@ function FieldModelDataShow() {
             width="30px"
           />
           <div>
-            <h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>
+            {/*<h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>*/}
+            <h3>854</h3>
             <span>领域数据表</span>
           </div>
         </div>

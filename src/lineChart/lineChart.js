@@ -131,7 +131,7 @@ function LineChart({ fieldModelData }) {
       <div className="fieldFont">热门领域</div>
       <Chart
         width="70%"
-        data={data}
+        data={datass}
         defs={defs}
         animate={{ type: 'scaley' }}
         pixelRatio={window.devicePixelRatio * 2}
