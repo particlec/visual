@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import apis from '../apis/apis';
-import imageUrl from '../picture/function.png';
 
 function FieldModelDataShow() {
   const [briefInfo, setBriefInfo] = useState(false);
@@ -19,14 +18,34 @@ function FieldModelDataShow() {
 
   return (
     <div className="block left" style={{ height: '100%', weight: '100%' }}>
-      <h2 className="title">领域模型数据</h2>
-      <div className="three-columns">
+      <h2
+        className="title"
+        style={{
+          fontWeight: '600',
+          fontSize: '18px',
+          marginTop: '20px',
+          // position: 'relative',
+        }}
+      >
+        领域模型数据
+      </h2>
+      <div className="three-columns" style={{ display: 'flex' }}>
         <div
           className="item"
-          style={{ display: 'inline-block', margin: '20px' }}
+          style={{
+            display: 'inline-block',
+            margin: '20px',
+            width: '30%',
+            textAlign: 'center',
+          }}
         >
           {/*<img src={require(`url(${imageUrl})`)} alt="" />*/}
-          <img src={require('../picture/function.png')} alt="1" />
+          {/*{imageUrl}*/}
+          <img
+            src={require('../picture/function.png').default}
+            height="30px"
+            width="30px"
+          />
           <div>
             <h3>{briefInfo?.functionCount ? briefInfo?.functionCount : 0}</h3>
             <span>领域函数</span>
@@ -34,9 +53,19 @@ function FieldModelDataShow() {
         </div>
         <div
           className="item"
-          style={{ display: 'inline-block', margin: '20px' }}
+          style={{
+            display: 'inline-block',
+            margin: '20px',
+            width: '30%',
+            textAlign: 'center',
+          }}
         >
-          <img src={require('../picture/language.png')} alt="" />
+          <img
+            src={require('../picture/language.png').default}
+            alt=""
+            height="30px"
+            width="30px"
+          />
           <div>
             <h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>
             <span>领域语言</span>
@@ -44,14 +73,34 @@ function FieldModelDataShow() {
         </div>
         <div
           className="item"
-          style={{ display: 'inline-block', margin: '20px' }}
+          style={{
+            display: 'inline-block',
+            margin: '20px',
+            width: '30%',
+            textAlign: 'center',
+          }}
         >
-          <img src={require('../picture/dataSheet.png')} alt="" />
+          <img
+            src={require('../picture/dataSheet.png').default}
+            alt=""
+            height="30px"
+            width="30px"
+          />
           <div>
-            <h3>{briefInfo?.dataTableCount ? briefInfo?.glossaryCount : 0}</h3>
+            <h3>{briefInfo?.glossaryCount ? briefInfo?.glossaryCount : 0}</h3>
             <span>领域数据表</span>
           </div>
         </div>
+        {/*<div*/}
+        {/*  className="item"*/}
+        {/*  style={{ display: 'inline-block', margin: '20px' }}*/}
+        {/*>*/}
+        {/*  <img src={require('../picture/dataSheet.png').default} alt="" />*/}
+        {/*  <div>*/}
+        {/*    <h3>{briefInfo?.dataTableCount ? briefInfo?.glossaryCount : 0}</h3>*/}
+        {/*    <span>领域数据表</span>*/}
+        {/*  </div>*/}
+        {/*</div>*/}
       </div>
     </div>
   );

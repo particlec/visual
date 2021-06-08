@@ -10,4 +10,22 @@ export default {
       },
     });
   },
+
+  querySummary: ({ sort, page, size, keyword, publishStatus = 1 }) => {
+    return instance.get(`${url_field_user}/field/Summary/query`, {
+      params: {
+        sort,
+        page,
+        size,
+        keyword,
+        publishStatus,
+      },
+    });
+  },
+
+  getInstanceRunStatisic: ({ startTime, endTime, span }) => {
+    return instance.get(`lvmp/statistic/runStatisic`, {
+      params: { startTime, endTime, span },
+    });
+  },
 };

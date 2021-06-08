@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Chart, Axis, Geom, Tooltip, Legend } from 'bizgoblin';
 import './lineChart.css';
 
 //react+G2   :https://bizcharts.net/product/bizgoblin/gallery
-function LineChart() {
-  const data = [
+function LineChart({ fieldModelData }) {
+  console.log(fieldModelData);
+  const [data, setData] = useState([]);
+  const datass = [
     {
       name: '领域数据表',
       领域: '审批流.',
@@ -94,11 +96,41 @@ function LineChart() {
     },
   ];
 
+  useEffect(() => {
+    // let len = fieldModelData.length;
+    // if (len > 5) {
+    //   len = 5;
+    // }
+    console.log(fieldModelData);
+    const arr = [];
+    for (let i = 0; i < 5; i++) {
+      const item = fieldModelData[i];
+      console.log(item);
+      arr.push({
+        name: '领域数据表',
+        领域: item['chName'],
+        个数: item['dataTableCount'],
+      });
+      arr.push({
+        name: '领域语言',
+        领域: item['chName'],
+        个数: item['glossaryCount'],
+      });
+      arr.push({
+        name: '领域函数',
+        领域: item['chName'],
+        个数: item['functionCount'],
+      });
+    }
+    console.log(arr);
+    setData(arr);
+  }, [fieldModelData]);
+
   return (
     <div>
       <div className="fieldFont">热门领域</div>
       <Chart
-        width="50%"
+        width="70%"
         data={data}
         defs={defs}
         animate={{ type: 'scaley' }}

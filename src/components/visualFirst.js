@@ -1,5 +1,7 @@
 import { Col, Row } from 'antd';
+import { useEffect, useState } from 'react';
 import styled from 'styled-components';
+import apis from '../apis/apis';
 import CodeBlock from '../codeBlock/codeBlock';
 import LineChart from '../lineChart/lineChart';
 import CloudRun from './cloudRun';
@@ -18,10 +20,20 @@ const EditCode = styled.div`
 `;
 
 function VisualFirst() {
+  const [fieldModelData, setFieldModelData] = useState([]);
+  console.log();
+  useEffect(() => {
+    apis.querySummary({ page: 0, size: 1 }).then(async res => {
+      let total = await res.data.utData.totalElements;
+      let resp = await apis.querySummary({ page: 0, size: total });
+      setFieldModelData(resp.data.utData.content);
+    });
+  }, []);
+
   return (
     <div className="consent">
       <Row className="consent-row">
-        <Col span={14}>
+        <Col span={11}>
           <div className="consent-row-FieldModelDataShow">
             <div className="consent-col">
               <FieldModelDataShow />
@@ -29,17 +41,21 @@ function VisualFirst() {
           </div>
 
           <div className="consent-row-LineChart">
-            <div className="consent-col">
-              <LineChart />
-            </div>
+            {fieldModelData.length !== 0 && (
+              <div className="consent-col">
+                <LineChart fieldModelData={fieldModelData} />
+              </div>
+            )}
           </div>
           <div className="consent-row-chart">
             <div className="consent-col"> </div>
             <CloudRun />
           </div>
         </Col>
-
-        <Col span={10}>
+        <Col span={1}>
+          <div style={{ backgroundColor: '#bfbfbf' }}>{''}</div>
+        </Col>
+        <Col span={12}>
           <EditCode>
             <CodeBlock />
           </EditCode>
